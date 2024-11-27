@@ -1,0 +1,23 @@
+<h1>Events</h1>
+<ul>
+  <% @events.each do |event| %>
+    <li>
+      <h3><%= event.title %></h3>
+      <p><%= event.description %></p>
+      <p><%= event.date %></p>
+      <img src="<%= event.image_url %>" alt="<%= event.title %>" />
+      <p><strong>Upvotes:</strong> <%= event.upvotes %></p>
+      <p><strong>Downvotes:</strong> <%= event.downvotes %></p>
+
+      <%= form_with url: vote_event_path(event), method: :post do %>
+        <%= hidden_field_tag :vote_type, 'up' %>
+        <%= submit_tag 'Upvote' %>
+      <% end %>
+
+      <%= form_with url: vote_event_path(event), method: :post do %>
+        <%= hidden_field_tag :vote_type, 'down' %>
+        <%= submit_tag 'Downvote' %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>

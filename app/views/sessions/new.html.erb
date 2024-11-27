@@ -1,0 +1,21 @@
+<h1 style="text-align: center; font-family: Arial, sans-serif; color: #333;">Login</h1>
+
+<%= form_with(url: session_path, method: :post, style: "max-width: 400px; margin: 0 auto; padding: 20px; border: 1px solid #ccc; border-radius: 5px; background-color: #f9f9f9;") do %>
+  <div style="margin-bottom: 15px;">
+    <%= label_tag :user_id, "User ID", style: "display: block; font-weight: bold; margin-bottom: 5px;" %>
+    <%= text_field_tag :email, nil, placeholder: "Enter your user ID", style: "width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" %>
+  </div>
+  
+  <div style="margin-bottom: 15px;">
+    <%= label_tag :password, "Password", style: "display: block; font-weight: bold; margin-bottom: 5px;" %>
+    <%= password_field_tag :password, nil, placeholder: "Enter your password", style: "width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" %>
+  </div>
+  
+  <div style="text-align: center;">
+    <%= submit_tag "Login", style: "padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer;" %>
+  </div>
+<% end %>
+
+<% if flash[:alert] %>
+  <p style="color: red; text-align: center; margin-top: 10px;"><%= flash[:alert] %></p>
+<% end %>

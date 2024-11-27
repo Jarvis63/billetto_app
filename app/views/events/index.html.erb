@@ -1,0 +1,19 @@
+<h1 style="text-align: center; font-family: Arial, sans-serif; color: #2c3e50;">Events</h1>
+
+<!-- Get Latest Button -->
+<%= button_to 'Get Latest Events', import_events_path, method: :post, style: "display: block; margin: 20px auto; padding: 10px 20px; background-color: #3498db; color: white; font-size: 16px; border: none; border-radius: 5px; cursor: pointer;" %>
+
+<ul style="list-style: none; padding: 0; margin: 0;">
+  <% @events.each do |event| %>
+    <li style="border: 1px solid #ddd; border-radius: 8px; margin: 15px 0; padding: 20px; background-color: #f9f9f9; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+      <h3 style="margin: 0 0 10px; font-size: 24px; color: #34495e;"><%= event.title %></h3>
+      <p style="margin: 0 0 10px; color: #7f8c8d; font-size: 14px;"><%= event.description %></p>
+      <p style="margin: 0 0 10px; color: #95a5a6; font-size: 12px;"><strong>Date:</strong> <%= event.date.strftime("%B %d, %Y - %I:%M %p") %></p>
+      <% if event.image_url.present? %>
+        <img src="<%= event.image_url %>" alt="<%= event.title %>" style="max-width: 100%; height: auto; border-radius: 4px; margin-top: 10px;" />
+      <% else %>
+        <p style="color: #e74c3c; font-size: 12px;">No image available</p>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
