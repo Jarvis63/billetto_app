@@ -3,7 +3,7 @@ source "https://rubygems.org"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 # Use a stable version of Rails (7.x recommended, as Rails 8 is still under development)
 gem "rails", "~> 7.0.0"
-gem "psych", "~> 4.0"
+gem "psych", "~> 5.2"
 gem 'ffi', '1.15.5'
 gem 'rake', '13.2.1'
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
