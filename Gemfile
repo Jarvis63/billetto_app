@@ -52,9 +52,9 @@ gem "thruster", require: false
 
 group :development, :test do
 
-gem 'rspec-rails', '~> 5.0', '>= 5.0.2'  # For Rails 7 compatibility
-gem 'rspec', '~> 5.0'
-gem 'factory_bot_rails', '~> 6.0'
+gem 'rspec-rails'
+gem 'rspec'
+gem 'factory_bot_rails'
 gem 'faker', '~> 2.18', '>= 2.18.0'   # For generating test data (optional but useful)
 gem 'database_cleaner-active_record', '~> 2.0', '>= 2.0.0'  # For cleaning the database between tests (optional)
 
