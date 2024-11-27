@@ -51,6 +51,13 @@ gem "thruster", require: false
 # gem "image_processing", "~> 1.2"
 
 group :development, :test do
+
+gem 'rspec-rails', '~> 5.0', '>= 5.0.2'  # For Rails 7 compatibility
+gem 'rspec', '~> 5.0'
+gem 'factory_bot_rails', '~> 6.0'
+gem 'faker', '~> 2.18', '>= 2.18.0'   # For generating test data (optional but useful)
+gem 'database_cleaner-active_record', '~> 2.0', '>= 2.0.0'  # For cleaning the database between tests (optional)
+
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
 
