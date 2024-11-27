@@ -55,7 +55,7 @@ group :development, :test do
 gem 'rspec-rails'
 gem 'rspec'
 gem 'factory_bot_rails'
-gem 'faker', '~> 2.18', '>= 2.18.0'   # For generating test data (optional but useful)
+gem 'faker', '~> 3.5'               # For generating test data (optional but useful)
 gem 'database_cleaner-active_record', '~> 2.0', '>= 2.0.0'  # For cleaning the database between tests (optional)
 
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
