@@ -210,7 +210,8 @@ GEM
       activesupport (>= 7.0.0)
       rack
       railties (>= 7.0.0)
-    psych (4.0.6)
+    psych (5.2.1)
+      date
       stringio
     public_suffix (6.0.1)
     puma (6.5.0)
@@ -400,7 +401,7 @@ DEPENDENCIES
   kamal
   pg (~> 1.1)
   propshaft
-  psych (~> 4.0)
+  psych (~> 5.2)
   puma (>= 5.0)
   rack-cors
   rails (~> 7.0.0)
