@@ -148,7 +148,7 @@ GEM
     json (2.8.2)
     jwt (2.9.3)
       base64
-    kamal (2.3.0)
+    kamal (2.4.0)
       activesupport (>= 7.0)
       base64 (~> 0.2)
       bcrypt_pbkdf (~> 1.0)
@@ -173,7 +173,7 @@ GEM
     matrix (0.4.2)
     method_source (1.1.0)
     mini_mime (1.1.5)
-    minitest (5.25.2)
+    minitest (5.25.4)
     msgpack (1.7.5)
     multi_xml (0.7.1)
       bigdecimal (~> 3.1)
